@@ -11,43 +11,25 @@ import java.util.Scanner;
  * @description:
  */
 public class Client {
-    public static void main(String[] args) {
-        Socket socket = null;
-        try {
-            socket = new Socket("localhost", 9090);
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
+    public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         while (true) {
+            //1、创建客户端Socket对象
+            Socket socket = new Socket("localhost", 9090);
+            //2.通过Socket获取输出流对象
+            OutputStream os = socket.getOutputStream();
             System.out.println("请输入...");
             String info = in.next();
+            //3、写出
+            os.write(info.getBytes());
             if (info.equals("886")) {
                 break;
             }
-            createClient(info, socket);
-        }
-        //关闭socket
-        try {
-            socket.close();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
-    }
 
-    public static void createClient(String info, Socket socket) {
-        //1、创建客户端Socket对象
-        OutputStream os = null;
-        try {
-            //2.通过Socket获取输出流对象
-            os = socket.getOutputStream();
-            //3、写出
-            os.write(info.getBytes());
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        } finally {
+            //关闭socket
             try {
                 os.close();
+                socket.close();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
