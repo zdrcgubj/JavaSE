@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="7_集合" />
+        <module name="8_IO流" />
+        <module name="1_流程控制" />
+        <module name="函数式编程LOS" />
+        <module name="9_网络编程" />
+        <module name="5_异常处理" />
+        <module name="MutilTest1" />
+        <module name="4_面向对象2" />
+        <module name="4_面向对象1" />
+        <module name="2_方法" />
+        <module name="3_数组" />
+        <module name="6_多线程" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="4_异常处理" target="1.5" />
+      <module name="4_面向对象" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
