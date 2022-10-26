@@ -34,6 +34,7 @@
         <module>8_IO流</module>
         <module>函数式编程LOS</module>
         <module>9_网络编程</module>
+        <module>10_反射</module>
     </modules>
 
     <dependencies>

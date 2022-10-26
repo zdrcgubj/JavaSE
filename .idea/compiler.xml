@@ -15,10 +15,11 @@
         <module name="5_异常处理" />
         <module name="MutilTest1" />
         <module name="4_面向对象2" />
-        <module name="4_面向对象1" />
+        <module name="10_反射" />
         <module name="2_方法" />
-        <module name="3_数组" />
+        <module name="4_面向对象1" />
         <module name="6_多线程" />
+        <module name="3_数组" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
